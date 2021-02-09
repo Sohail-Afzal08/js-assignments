@@ -1,0 +1,22 @@
+<script>
+    var firstNum = parseInt(prompt('Please enter first number'));
+    var secondNum = parseInt(prompt('Please enter second name'));
+    var operator = prompt('Please enter operator i.e. + or - or * or / or %');
+
+    var result;
+    if (operator == "+"){
+        var result = firstNum + secondNum;
+    }else if (operator =="-"){
+        var result = firstNum - secondNum;
+    }else if (operator =='*'){
+        var result = firstNum * secondNum;
+    }else if (operator == "/"){
+        var result = firstNum / secondNum;
+    }
+    else if (operator == "%"){
+        var result = firstNum % secondNum;
+    }else{
+        var result="No correct value entered";
+    }
+    alert (result);
+</script>
