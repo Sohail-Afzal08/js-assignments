@@ -2,26 +2,49 @@
     //Step -1
     var courses=[];
       //Step -2
-    for (i=0;i<5;i++){
-        var selectCourse = prompt('Please enter course name');
-        courses.push(selectCourse);
-     }
+        var course1 = prompt('Please enter course name');
+        courses.push(course1);
+        var course2 = prompt('Please enter course name');
+        courses.push(course2);
+        var course3 = prompt('Please enter course name');
+        courses.push(course3);
+        var course4 = prompt('Please enter course name');
+        courses.push(course4);
+        var course5 = prompt('Please enter course name');
+        courses.push(course5);
+
+
        //Step -3
-    for (i=0;i<5;i++){
-        alert(courses[i]);
-     }
+        alert(courses[0]);
+        alert(courses[1]);
+        alert(courses[2]);
+        alert(courses[3]);
+        alert(courses[4]);
+    
        //Step -4
-     for (i=0;i<5;i++){
-        var selectedCourse = prompt('course'+(i+1), courses[i]);
-     }
-       //Step -5
-     for (i=0;i<5;i++){
-        var editCourse = prompt('course'+(i+1), courses[i]);
-        courses.splice(i,1,editCourse);
-     }
+        prompt('course1', courses[0]);
+        prompt('course2', courses[1]);
+        prompt('course3', courses[2]);
+        prompt('course4', courses[3]);
+        prompt('course5', courses[4]);
+     
+        //Step -5
+        var editCourse1 = prompt('If you want to change coure please enter course1', courses[0]);
+        courses.splice(0,1,editCourse1);
+        var editCourse2 = prompt('If you want to change coure please enter course2', courses[1]);
+        courses.splice(1,1,editCourse2);
+        var editCourse3 = prompt('If you want to change coure please enter course3', courses[2]);
+        courses.splice(2,1,editCourse3);
+        var editCourse4 = prompt('If you want to change coure please enter course4', courses[3]);
+        courses.splice(3,1,editCourse4);
+        var editCourse5 = prompt('If you want to change coure please enter course5', courses[4]);
+        courses.splice(4,1,editCourse5);
+
        //Step -6
-     for (i=0;i<5;i++){
-        alert(courses[i]);
-     }
+        alert(courses[0]);
+        alert(courses[1]);
+        alert(courses[2]);
+        alert(courses[3]);
+        alert(courses[4]);
 
 </script>
