@@ -1,0 +1,35 @@
+<script>
+    var totalMarks=500;
+    var obtainedMarks=0;
+    for (i=0; i<5;i++){
+        obtainedMarks += parseInt(prompt('Please enter marks of course'+(i + 1)));
+    }
+    var totalPercentage = Math.round(obtainedMarks/totalMarks*100);
+    var grade =''; 
+    switch (true) {
+    // If score is 90 or greater
+    case totalPercentage >= 90:
+        grade ="A+";
+        break;
+    // If score is 75 or greater
+    case totalPercentage >= 75:
+        grade ="A";
+        break;
+    // If score is 60 or greater
+    case totalPercentage >= 60:
+        grade ="B";
+        break;
+    // If score is 45 or greater
+    case totalPercentage >= 45:
+        grade ="C";
+        break;
+    // If score is 30 or greater
+    case totalPercentage >= 30:
+        grade ="D";
+        break;
+    // If score 29 or below
+    default:
+        grade ="F";
+}
+    alert('Your grade is '+grade);
+</script>
