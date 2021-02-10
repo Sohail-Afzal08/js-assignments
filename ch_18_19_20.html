@@ -1,0 +1,27 @@
+<script>
+    //Step -1
+    var courses=[];
+      //Step -2
+    for (i=0;i<5;i++){
+        var selectCourse = prompt('Please enter course name');
+        courses.push(selectCourse);
+     }
+       //Step -3
+    for (i=0;i<5;i++){
+        alert(courses[i]);
+     }
+       //Step -4
+     for (i=0;i<5;i++){
+        var selectedCourse = prompt('course'+(i+1), courses[i]);
+     }
+       //Step -5
+     for (i=0;i<5;i++){
+        var editCourse = prompt('course'+(i+1), courses[i]);
+        courses.splice(i,1,editCourse);
+     }
+       //Step -6
+     for (i=0;i<5;i++){
+        alert(courses[i]);
+     }
+
+</script>
