@@ -1,0 +1,29 @@
+<script>
+    var number = parseFloat(prompt('please enter any decimal number'));
+    
+    number = Math.ceil(number);
+
+    var text = "Pakistan is a country in South Asia";
+    var sliceText = text.slice(0, number);
+    
+    console.log(sliceText);
+    var reverseText='';
+    for(i=0;i<sliceText.length;i++){
+       reverseText += sliceText[sliceText.length-(i+1)];
+    }
+    console.log(reverseText);
+</script>
+
+//task-2
+
+<script>
+    var inputValue=prompt('Please enter any sentence');
+   
+    var inputValue = inputValue.toLowerCase().split(' ');
+   for (var i = 0; i < inputValue.length; i++) {
+       
+       inputValue[i] = inputValue[i].charAt(0).toUpperCase() + inputValue[i].substring(1);     
+   }
+    console.log(inputValue.join(' '));
+   
+</script>
