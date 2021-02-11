@@ -1,0 +1,43 @@
+<script>
+    var name = prompt('Please enter your name');
+    var inputDay = parseInt(prompt('Please enter your DOB (Date)'));
+    var inputMonth = parseInt(prompt('Please enter your DOB (Month)'));
+    var inputYear = parseInt(prompt('Please enter your DOB (Year)'));
+
+    var greeting;
+        var time = new Date().getHours();
+        if (time < 10) {
+            greeting = "Good Morning";
+        } else if (time < 16) {
+            greeting = "Good AfterNoon";
+        } else if (time < 19) {
+            greeting = "Good Evening";
+        } else {
+            greeting = "Good Night";
+        }
+        
+        var DOB = new Date(inputYear,inputMonth-1,inputDay); //use -1 becuase next month show in my browser and system current date is also correct, I cannot understadn it.
+        var currentDate = new Date();
+        var totalSecond = Math.floor((currentDate - DOB)/1000);
+        var totalMinutes = Math.floor(totalSecond/60);
+        var totalHours = Math.floor(totalMinutes/60);
+        var totalDays = Math.floor(totalHours/24); 
+        var totalYears = Math.floor(totalDays/365);
+
+        var birthDayMonth=new Date(currentDate.getFullYear(), inputMonth-1, inputDay);
+        var one_day=1000*60*60*24;
+        var remainingDays = Math.ceil((birthDayMonth.getTime()-currentDate.getTime())/(one_day));
+        
+
+    console.log('Hello '+name+' '+greeting);
+    console.log("Your DOB is "+DOB);
+    console.log("You are "+totalYears+ " years old");
+    console.log('Your Age in Days '+totalDays);
+    console.log('Your Age in Hours '+totalHours);
+    if (currentDate.getDate() == inputDay && currentDate.getMonth()+1 == inputMonth){ //use +1 becuase previous month show in my browser and system current date is also correct, I cannot understadn it.
+        console.log('happy Birth Day '+name);
+    }else{
+        console.log('your birthday Duration Days '+remainingDays);
+    }
+
+</script>
