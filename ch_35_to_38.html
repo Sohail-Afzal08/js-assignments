@@ -1,0 +1,32 @@
+<script>
+
+    function CapitalCase(inputText){
+        inputText = inputText.toLowerCase().split(' ');
+        for (var i = 0; i < inputText.length; i++) {
+            inputText[i] = inputText[i].charAt(0).toUpperCase() + inputText[i].substring(1);     
+        }
+        return inputText.join(' ');
+    }
+
+    var inputVal = prompt('Please enter any sentence');
+
+   console.log(CapitalCase(inputVal));
+
+
+</script>
+
+<script>
+
+// Second Assignment
+
+    var inputVal = parseInt(prompt('Please enter any Integer Value'));
+
+    var result = 1;
+        for(i=1;i<=inputVal;i++){
+        result *= i;
+        }
+    console.log(result);
+
+</script>
+
+
